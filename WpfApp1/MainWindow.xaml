@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="#FFBACBD2">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="200"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Image Source="C:\Users\201708\source\repos\WpfApp1\WpfApp1\Resources\VHS.ico" HorizontalAlignment="Left" Margin="20,0"/>
+        <Frame x:Name="Mainframe" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
