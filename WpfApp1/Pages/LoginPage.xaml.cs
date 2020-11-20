@@ -50,7 +50,9 @@ namespace WpfApp1.Pages
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {            if (MainWindow.HermesDB.User.Where(x => x.Login == LoginTB.Text && x.Password == PasswordTB.Password) != null)
-            this.NavigationService.Navigate(new ClientsPage());
+                this.NavigationService.Navigate(new ClientsPage());
+            else
+                MessageBox.Show("Неправельный логин или пароль");
         }
     }
 }

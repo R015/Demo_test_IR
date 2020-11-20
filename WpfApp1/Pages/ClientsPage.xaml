@@ -22,15 +22,15 @@
             <StackPanel Orientation="Horizontal">
                 <StackPanel HorizontalAlignment="Right" Margin="5" Orientation="Horizontal">
                 <Label Content="Name"/>
-                <TextBox Width="200"/>
+                <TextBox Width="200" x:Name="NameTB" TextChanged="NameTB_TextChanged"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Right" Margin="5" Orientation="Horizontal">
                 <Label Content="Telephone"/>
-                <TextBox Width="200"/>
+                    <TextBox Width="200" x:Name="TelephoneTB"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Right" Margin="5" Orientation="Horizontal">
                 <Label Content="Email"/>
-                <TextBox Width="200"/>
+                    <TextBox Width="200" x:Name="EmailTB"/>
             </StackPanel>
             </StackPanel>
                 

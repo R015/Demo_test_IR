@@ -21,6 +21,7 @@ namespace WpfApp1.Pages
     /// </summary>
     public partial class ClientsPage : Page
     {
+        List<Client> clients { get; set; }
         public ClientsPage()
         {
             InitializeComponent();
@@ -28,7 +29,21 @@ namespace WpfApp1.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            ClientsDataGrid.ItemsSource = MainWindow.HermesDB.Client.ToList();
+            clients = MainWindow.HermesDB.Client.ToList();
+            ClientsDataGrid.ItemsSource = clients;
+        }
+
+        private void Refresh() 
+        {
+            if (String.IsNullOrEmpty(NameTB.Text) || String.IsNullOrEmpty(NameTB.Text) || String.IsNullOrEmpty(NameTB.Text))
+            {
+                clients.Where(x => x.Firstname.ToUpper().Contains(NameTB.Text));
+            }
+        }
+
+        private void NameTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

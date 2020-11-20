@@ -9,7 +9,7 @@ namespace WpfApp1.Data
 {
     public partial class Client
     {
-        public DateTime LastDate { get => MainWindow.HermesDB.Visit.Where(x => x.ClientId == this.Id).OrderBy().FirstOrDefault().Date ; set { } }
+        public DateTime? LastDate { get; set; }
         public int CountDate { get => MainWindow.HermesDB.Visit.Where(x => x.ClientId == this.Id).Count() ; set { } }
     }
 }
